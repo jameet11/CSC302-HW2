@@ -1,0 +1,20 @@
+# Question 2 
+
+df = read.csv("G:/.shortcut-targets-by-id/1ehWwunuAo7CE1Vk2JYkUnQMmxh5pph3C/DATA/WorldCupMatches.csv", header = TRUE, sep = ',')
+#(a)
+dim(df)
+# (b)
+summary(df)
+# (c)
+unique_cities <- length(unique(df$City))
+print(unique_cities)
+# (d)
+average_attendance <- mean($Attendance)
+print(average_attendance)
+# (e)
+goals_by_team <- df %>% group_by(Home.Team.Name) %>% summarise(total_goals = sum(Home.Team.Goals))
+print(goals_by_team)
+# (f)
+average_attendees_per_year <- df %>% group_by(Year) %>% summarise(average_attendees = mean(Attendance))
+print(average_attendees_per_year)
+
